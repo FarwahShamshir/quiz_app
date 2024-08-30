@@ -23,8 +23,10 @@ Run flutter pub get to install dependencies.
 Use flutter run to start the app on your emulator or connected device.
 Customization
 You can easily customize the questions, answers, and styling by modifying the _questions list in main.dart and the relevant widgets in the question.dart and result.dart files.
-![q2](https://github.com/user-attachments/assets/b8266087-7e14-41eb-9e1b-16c6ad69dc00)
-![q1](https://github.com/user-attachments/assets/03793487-8bc0-4ae9-b576-81e178af1449)
+![q1](https://github.com/user-attachments/assets/61264020-4885-4400-aa9b-cb20aaee4063)
+
+![WhatsApp Image 2024-08-30 at 6 13 20 PM](https://github.com/user-attachments/assets/f753d53d-9988-4242-9a96-1d7e8857af76)
+
 
 
 
