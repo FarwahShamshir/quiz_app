@@ -3,7 +3,7 @@ import 'package:quiz_app/question.dart';
 import 'package:quiz_app/result.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -121,13 +121,13 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF9A8873), // Background color for the Scaffold
+        backgroundColor: const Color(0xFF9A8873), // Background color for the Scaffold
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Flutter Quiz',
             style: TextStyle(fontSize: 30),
           ),
-          backgroundColor: Color(0xFF754043), // AppBar color
+          backgroundColor: const Color(0xFF754043), // AppBar color
           centerTitle: true,
         ),
         body: _questionIndex < _questions.length
@@ -137,12 +137,12 @@ class _MyAppState extends State<MyApp> {
             Question(
               _questions[_questionIndex]['questionText'] as String,
             ),
-            SizedBox(height: 40),
+            const  SizedBox(height: 40),
             ...(_questions[_questionIndex]['answers'] as List<Map<String, Object>>)
                 .map((answer) {
               return _buildAnswerButton(
                   answer['text'] as String, answer['score'] as int);
-            }).toList(),
+            }),
           ],
         )
             : Result(_totalScore, _questions.length),
@@ -157,12 +157,12 @@ class _MyAppState extends State<MyApp> {
         width: 300.0,
         height: 60.0,
         decoration: BoxDecoration(
-          color: Color(0xFF754043), // Button color
+          color: const Color(0xFF754043), // Button color
           borderRadius: BorderRadius.circular(18.0),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
-              offset: Offset(2, 4),
+              offset:const Offset(2, 4),
               blurRadius: 6.0,
             ),
           ],
@@ -178,7 +178,7 @@ class _MyAppState extends State<MyApp> {
           onPressed: () => _answerQuestion(score),
           child: Text(
             answerText,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16, // Reduced text size to fit within the box
               color: Colors.white,
             ),
